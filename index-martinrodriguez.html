@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martín Rodríguez Abogados, S.C. — Despacho Jurídico</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2e45;
+    --gold: #b8965a;
+    --gold-light: #d4b07a;
+    --gold-pale: #f0e0c0;
+    --cream: #f9f5ef;
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-mid: #4a4a4a;
+    --text-light: #8a8a8a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(13,27,42,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,150,90,0.25);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.9rem;
+  }
+  .nav-logo svg { width: 38px; height: 38px; }
+  .nav-brand { color: var(--white); }
+  .nav-brand span { display: block; }
+  .nav-brand .brand-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 600; letter-spacing: 0.04em;
+  }
+  .nav-brand .brand-sub {
+    font-size: 0.6rem; font-weight: 400; letter-spacing: 0.18em;
+    color: var(--gold); text-transform: uppercase; margin-top: 1px;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 500; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); padding: 0.55rem 1.5rem;
+    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg-lines {
+    position: absolute; inset: 0; pointer-events: none;
+    opacity: 0.06;
+  }
+  .hero-bg-lines line { stroke: var(--gold); stroke-width: 1; }
+  .hero-ornament {
+    position: absolute; right: -5%; top: 50%; transform: translateY(-50%);
+    width: 55vw; max-width: 800px; opacity: 0.04;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 8rem 4rem 4rem;
+    max-width: 700px;
+    animation: fadeUp 1.2s ease both;
+  }
+  .hero-eyebrow {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.8rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--white); margin-bottom: 0.3rem;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-title strong { font-weight: 600; display: block; }
+  .hero-rule {
+    width: 60px; height: 2px; background: var(--gold);
+    margin: 2rem 0;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.6); font-size: 0.85rem;
+    line-height: 1.9; max-width: 480px; margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    padding: 1rem 2.5rem; font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; border: none; cursor: pointer;
+    transition: all 0.3s; text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 1rem 2.5rem; font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 500; border: 1px solid rgba(255,255,255,0.3); cursor: pointer;
+    transition: all 0.3s; text-decoration: none; display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-stats {
+    position: absolute; bottom: 4rem; right: 4rem;
+    display: flex; gap: 3rem; z-index: 2;
+    animation: fadeUp 1.4s ease 0.3s both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 300; color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45); margin-top: 0.4rem; font-weight: 400;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 7rem 4rem; }
+  .section-tag {
+    font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); display: flex; align-items: center; gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .section-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400; line-height: 1.2;
+    color: var(--navy);
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-divider {
+    width: 50px; height: 2px; background: var(--gold); margin: 1.8rem 0;
+  }
+
+  /* ── SOBRE NOSOTROS ── */
+  #nosotros {
+    background: var(--cream);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  }
+  .nosotros-text p {
+    font-size: 0.88rem; line-height: 1.95; color: var(--text-mid);
+    font-weight: 300; margin-bottom: 1.2rem;
+  }
+  .nosotros-text p strong { color: var(--navy); font-weight: 600; }
+  .cedula-box {
+    margin-top: 2.5rem; padding: 1.4rem 2rem;
+    border-left: 3px solid var(--gold); background: rgba(184,150,90,0.07);
+    display: inline-block;
+  }
+  .cedula-box span {
+    display: block; font-size: 0.62rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;
+  }
+  .cedula-box strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: var(--navy);
+  }
+  .nosotros-visual {
+    position: relative;
+  }
+  .visual-frame {
+    background: var(--navy); padding: 3rem;
+    position: relative; overflow: hidden;
+  }
+  .visual-frame::before {
+    content: ''; position: absolute;
+    top: 1.2rem; left: 1.2rem; right: -1.2rem; bottom: -1.2rem;
+    border: 1px solid var(--gold); z-index: 0;
+  }
+  .visual-frame-inner {
+    position: relative; z-index: 1;
+    text-align: center; padding: 3rem 2rem;
+  }
+  .shield-large { width: 100px; margin: 0 auto 1.5rem; }
+  .visual-frame-inner h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; color: var(--white); font-weight: 400;
+  }
+  .visual-frame-inner p {
+    font-size: 0.75rem; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.5rem;
+  }
+  .values-list { margin-top: 2rem; list-style: none; }
+  .values-list li {
+    display: flex; align-items: center; gap: 1rem;
+    color: rgba(255,255,255,0.7); font-size: 0.8rem;
+    padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .values-list li::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--gold); flex-shrink: 0; transform: rotate(45deg);
+  }
+
+  /* ── SERVICIOS ── */
+  #servicios { background: var(--navy); }
+  #servicios .section-title { color: var(--white); }
+  #servicios .section-tag { }
+  .servicios-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    margin-top: 4rem; background: rgba(184,150,90,0.2);
+  }
+  .servicio-card {
+    background: var(--navy-mid); padding: 3rem 2.5rem;
+    transition: all 0.4s; cursor: default; position: relative;
+    overflow: hidden;
+  }
+  .servicio-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--gold);
+    transition: width 0.4s;
+  }
+  .servicio-card:hover::after { width: 100%; }
+  .servicio-card:hover { background: rgba(26,46,69,0.9); }
+  .servicio-icon {
+    width: 48px; height: 48px; margin-bottom: 1.8rem;
+    color: var(--gold); opacity: 0.8;
+  }
+  .servicio-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: var(--white); font-weight: 400;
+    margin-bottom: 1rem; line-height: 1.3;
+  }
+  .servicio-card p {
+    font-size: 0.78rem; color: rgba(255,255,255,0.5);
+    line-height: 1.8; font-weight: 300;
+  }
+
+  /* ── POR QUÉ NOSOTROS ── */
+  #porque {
+    background: var(--cream);
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start;
+  }
+  .porque-features { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 3rem; }
+  .feature {
+    display: flex; gap: 1.5rem; align-items: flex-start;
+  }
+  .feature-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; color: var(--gold-pale);
+    line-height: 1; flex-shrink: 0; width: 50px;
+  }
+  .feature-body h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; color: var(--navy); margin-bottom: 0.5rem; font-weight: 500;
+  }
+  .feature-body p {
+    font-size: 0.8rem; color: var(--text-mid); line-height: 1.8; font-weight: 300;
+  }
+
+  /* ── CONTACTO ── */
+  #contacto { background: var(--navy); }
+  #contacto .section-title { color: var(--white); }
+  .contacto-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 4rem;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+  .contact-item {
+    display: flex; gap: 1.3rem; align-items: flex-start;
+  }
+  .contact-icon {
+    width: 40px; height: 40px; background: rgba(184,150,90,0.15);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; color: var(--gold);
+  }
+  .contact-icon svg { width: 18px; height: 18px; }
+  .contact-item-label {
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.3rem;
+  }
+  .contact-item-value {
+    font-size: 0.85rem; color: rgba(255,255,255,0.8); font-weight: 300;
+  }
+  .contact-item-value a { color: inherit; text-decoration: none; }
+  .contact-item-value a:hover { color: var(--gold); }
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-label {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  .form-input, .form-textarea {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white); padding: 0.9rem 1.2rem;
+    font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 300;
+    outline: none; transition: border-color 0.3s; resize: none;
+  }
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-textarea { height: 130px; }
+  .form-submit {
+    background: var(--gold); color: var(--navy); border: none;
+    padding: 1.1rem 2.5rem; font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; cursor: pointer; transition: all 0.3s;
+    align-self: flex-start;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080f17; padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(184,150,90,0.2);
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; color: rgba(255,255,255,0.5); font-weight: 300;
+  }
+  .footer-copy {
+    font-size: 0.65rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.1em;
+  }
+  .footer-social { display: flex; gap: 1rem; }
+  .footer-social a {
+    width: 36px; height: 36px; border: 1px solid rgba(184,150,90,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); text-decoration: none; font-size: 0.8rem;
+    transition: all 0.3s;
+  }
+  .footer-social a:hover { background: var(--gold); color: var(--navy); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links, .nav-cta { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero-content { padding: 7rem 1.5rem 3rem; }
+    .hero-stats { right: 1.5rem; bottom: 2rem; gap: 1.5rem; }
+    #nosotros, #porque, .contacto-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+    #hero { min-height: 90vh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-logo">
+    <svg viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2 L56 14 L56 38 C56 53 44 64 30 68 C16 64 4 53 4 38 L4 14 Z" fill="none" stroke="#b8965a" stroke-width="2"/>
+      <line x1="20" y1="30" x2="40" y2="30" stroke="#b8965a" stroke-width="1.5"/>
+      <line x1="30" y1="22" x2="30" y2="38" stroke="#b8965a" stroke-width="1.5"/>
+      <circle cx="22" cy="28" r="5" fill="none" stroke="#b8965a" stroke-width="1.2"/>
+      <circle cx="38" cy="28" r="5" fill="none" stroke="#b8965a" stroke-width="1.2"/>
+      <text x="30" y="52" text-anchor="middle" font-family="serif" font-size="9" fill="#b8965a" font-weight="600">MR</text>
+    </svg>
+    <div class="nav-brand">
+      <span class="brand-main">Martín Rodríguez Abogados</span>
+      <span class="brand-sub">Despacho Jurídico · S.C.</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#porque">¿Por qué elegirnos?</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consulta Gratuita</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <svg class="hero-bg-lines" viewBox="0 0 1440 900" preserveAspectRatio="none">
+    <line x1="0" y1="200" x2="1440" y2="200"/>
+    <line x1="0" y1="400" x2="1440" y2="400"/>
+    <line x1="0" y1="600" x2="1440" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+  </svg>
+
+  <!-- Large background shield -->
+  <svg class="hero-ornament" viewBox="0 0 400 460" fill="none">
+    <path d="M200 10 L380 80 L380 240 C380 340 300 420 200 450 C100 420 20 340 20 240 L20 80 Z" stroke="#b8965a" stroke-width="2"/>
+    <path d="M200 40 L355 100 L355 240 C355 330 280 400 200 425 C120 400 45 330 45 240 L45 100 Z" stroke="#b8965a" stroke-width="1" stroke-dasharray="6 4"/>
+    <line x1="120" y1="220" x2="280" y2="220" stroke="#b8965a" stroke-width="2"/>
+    <line x1="200" y1="140" x2="200" y2="300" stroke="#b8965a" stroke-width="2"/>
+    <circle cx="145" cy="210" r="35" stroke="#b8965a" stroke-width="2" fill="none"/>
+    <circle cx="255" cy="210" r="35" stroke="#b8965a" stroke-width="2" fill="none"/>
+    <text x="200" y="375" text-anchor="middle" font-family="serif" font-size="42" fill="#b8965a">MR</text>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Despacho Jurídico en Hermosillo, Sonora</div>
+    <h1 class="hero-title">
+      <em>Defendemos</em>
+      <strong>Sus Derechos</strong>
+    </h1>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">
+      Con amplia trayectoria en Derecho Laboral y diversas áreas legales, ofrecemos asesoría especializada con ética, compromiso y resultados que generan confianza.
+    </p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Agendar Consulta</a>
+      <a href="#servicios" class="btn-secondary">Nuestros Servicios</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">+10</div>
+      <div class="stat-label">Años de<br>Experiencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+500</div>
+      <div class="stat-label">Casos<br>Resueltos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Compromiso<br>con el Cliente</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NOSOTROS ── -->
+<section id="nosotros">
+  <div class="nosotros-text reveal">
+    <div class="section-tag">Quiénes Somos</div>
+    <h2 class="section-title">Experiencia y <em>dedicación</em> a su servicio</h2>
+    <div class="section-divider"></div>
+    <p>
+      <strong>Martín Rodríguez Abogados, S.C.</strong> es un despacho jurídico con amplia trayectoria en el estado de Sonora, especializado en Derecho Laboral y diversas ramas del derecho mexicano.
+    </p>
+    <p>
+      Nuestro enfoque es claro: brindar asesoría legal de calidad, con transparencia y resultados tangibles. Cada caso es tratado con la atención personalizada que merece, porque entendemos que detrás de cada expediente existe una persona con necesidades reales.
+    </p>
+    <p>
+      Defendemos los derechos de nuestros clientes con la misma determinación en cada asunto, ya sea una consulta de orientación o un litigio de alta complejidad.
+    </p>
+    <div class="cedula-box">
+      <span>Cédula Profesional</span>
+      <strong>11073434</strong>
+    </div>
+  </div>
+
+  <div class="nosotros-visual reveal">
+    <div class="visual-frame">
+      <div class="visual-frame-inner">
+        <svg class="shield-large" viewBox="0 0 100 120" fill="none">
+          <path d="M50 5 L93 22 L93 62 C93 85 74 103 50 115 C26 103 7 85 7 62 L7 22 Z" fill="none" stroke="#b8965a" stroke-width="2"/>
+          <line x1="30" y1="58" x2="70" y2="58" stroke="#b8965a" stroke-width="1.8"/>
+          <line x1="50" y1="38" x2="50" y2="78" stroke="#b8965a" stroke-width="1.8"/>
+          <circle cx="32" cy="54" r="12" fill="none" stroke="#b8965a" stroke-width="1.5"/>
+          <circle cx="68" cy="54" r="12" fill="none" stroke="#b8965a" stroke-width="1.5"/>
+          <text x="50" y="99" text-anchor="middle" font-family="serif" font-size="14" fill="#b8965a" font-weight="600">MR</text>
+        </svg>
+        <h3>Martín Rodríguez<br>Abogados</h3>
+        <p>S.C. · Hermosillo, Sonora</p>
+        <ul class="values-list">
+          <li>Ética profesional sin concesiones</li>
+          <li>Compromiso total con cada cliente</li>
+          <li>Resultados que generan confianza</li>
+          <li>Trato humano y transparente</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="reveal">
+    <div class="section-tag">Áreas de Práctica</div>
+    <h2 class="section-title">Nuestros <em>Servicios</em> Legales</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="servicios-grid reveal">
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <h3>Derecho Laboral</h3>
+      <p>Asesoría y representación en conflictos laborales, despidos injustificados, liquidaciones, reinstalaciones y demandas ante la Junta de Conciliación y Arbitraje.</p>
+    </div>
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M3 9h18M9 21V9"/>
+      </svg>
+      <h3>Derecho Civil</h3>
+      <p>Contratos, obligaciones, arrendamientos, compraventas, sucesiones, divorcio y todo tipo de controversias del orden civil y familiar.</p>
+    </div>
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <h3>Derecho Penal</h3>
+      <p>Defensa penal, asesoría a víctimas, trámites ante el Ministerio Público y representación en procedimientos del sistema de justicia penal acusatorio.</p>
+    </div>
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <h3>Derecho Inmobiliario</h3>
+      <p>Regularización de inmuebles, escrituración, contratos de arrendamiento, desahucios y asesoría integral en operaciones inmobiliarias.</p>
+    </div>
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+      <h3>Asesoría Empresarial</h3>
+      <p>Constitución de sociedades, contratos mercantiles, compliance laboral, asesoría preventiva y representación legal para personas morales.</p>
+    </div>
+
+    <div class="servicio-card">
+      <svg class="servicio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 8v4l3 3"/>
+      </svg>
+      <h3>Consulta & Orientación</h3>
+      <p>Primera consulta de orientación legal para evaluar su caso, conocer sus derechos y definir la estrategia jurídica más adecuada para su situación.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── POR QUÉ NOSOTROS ── -->
+<section id="porque">
+  <div class="reveal">
+    <div class="section-tag">Nuestra Diferencia</div>
+    <h2 class="section-title">¿Por qué elegir<br><em>Martín Rodríguez</em>?</h2>
+    <div class="section-divider"></div>
+    <p style="font-size:0.85rem;line-height:1.9;color:var(--text-mid);max-width:400px;font-weight:300;">
+      Contamos con la combinación de conocimiento jurídico, experiencia práctica y compromiso humano que su caso requiere.
+    </p>
+  </div>
+  <div class="porque-features reveal">
+    <div class="feature">
+      <div class="feature-num">01</div>
+      <div class="feature-body">
+        <h4>Especialización Comprobada</h4>
+        <p>Años de práctica enfocada en las áreas de mayor demanda legal, con resultados medibles y clientes satisfechos en Hermosillo y Sonora.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">02</div>
+      <div class="feature-body">
+        <h4>Atención Personalizada</h4>
+        <p>Cada cliente recibe atención directa del titular del despacho. Conocemos su caso a fondo y comunicamos avances de manera clara y oportuna.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">03</div>
+      <div class="feature-body">
+        <h4>Honorarios Transparentes</h4>
+        <p>Sin sorpresas. Presentamos un presupuesto claro desde el primer momento, con honorarios justos y acordes a la complejidad del asunto.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">04</div>
+      <div class="feature-body">
+        <h4>Ética y Confidencialidad</h4>
+        <p>Su información está protegida bajo estricto secreto profesional. Actuamos siempre dentro del marco legal y con integridad absoluta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="reveal">
+    <div class="section-tag">Contáctenos</div>
+    <h2 class="section-title">Estamos <em>listos</em> para ayudarle</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="contacto-layout reveal">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Teléfono</div>
+          <div class="contact-item-value">
+            <a href="tel:6626900728">662 690 0728</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">WhatsApp</div>
+          <div class="contact-item-value">
+            <a href="https://wa.me/5216621492035" target="_blank">+52 1 662 149 2035</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Correo Electrónico</div>
+          <div class="contact-item-value">
+            <a href="mailto:abogadosmartinrodriguez@gmail.com">abogadosmartinrodriguez@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Dirección</div>
+          <div class="contact-item-value">Irineo Michell #75H<br>Hermosillo, Sonora, C.P. 83270</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Nombre</label>
+          <input class="form-input" type="text" placeholder="Su nombre completo">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Teléfono</label>
+          <input class="form-input" type="tel" placeholder="Su número de contacto">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Correo Electrónico</label>
+        <input class="form-input" type="email" placeholder="correo@ejemplo.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Área de Interés</label>
+        <input class="form-input" type="text" placeholder="Ej. Derecho Laboral, Civil, Penal...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Describa su caso brevemente</label>
+        <textarea class="form-textarea" placeholder="Cuéntenos en qué podemos ayudarle..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(this)">Enviar Mensaje</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">Martín Rodríguez Abogados, S.C. © 2025</div>
+  <div class="footer-copy">Cédula Profesional 11073434 · Hermosillo, Sonora</div>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/abogadosmartinrodriguez/" target="_blank" title="Facebook">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    </a>
+    <a href="#" title="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/5216621492035" target="_blank" title="WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 100);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit(btn) {
+    const form = btn.closest('.contact-form');
+    const name = form.querySelector('input[type="text"]').value;
+    if (!name.trim()) { alert('Por favor ingrese su nombre.'); return; }
+    btn.textContent = '✓ Mensaje Enviado';
+    btn.style.background = '#2d6a4f';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>

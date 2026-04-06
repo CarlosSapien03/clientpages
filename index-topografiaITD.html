@@ -1,0 +1,1837 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topografía de Sonora — Servicios Integrales de Topografía</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #080b0e;
+        --dark: #0e1217;
+        --dark2: #161c24;
+        --dark3: #1e2630;
+        --orange: #f05a1a;
+        --orange2: #ff7e3f;
+        --amber: #ffa940;
+        --white: #f0ece4;
+        --gray: #7a8494;
+        --gray2: #b0b8c6;
+        --grid: rgba(240, 90, 26, 0.07);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--dark);
+        color: var(--white);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(var(--grid) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3.5rem;
+        height: 64px;
+        background: rgba(8, 11, 14, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(240, 90, 26, 0.18);
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .nav-wordmark {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+        line-height: 1;
+      }
+      .nav-wordmark .t {
+        color: var(--white);
+      }
+      .nav-wordmark .d {
+        color: var(--gray);
+        font-size: 0.8rem;
+        margin: 0 0.15em;
+      }
+      .nav-wordmark .s {
+        color: var(--orange);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.8rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--orange);
+      }
+      .nav-cta {
+        font-family: "Space Mono", monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        background: var(--orange);
+        color: #000;
+        border: none;
+        padding: 0.6rem 1.6rem;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--orange2);
+      }
+
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 3.5rem 5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-canvas {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .hero-cross {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: min(52vw, 660px);
+        aspect-ratio: 1;
+        pointer-events: none;
+        opacity: 0.1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+      }
+      .hero-kicker {
+        font-family: "Space Mono", monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        animation: fadeUp 0.8s ease both;
+      }
+      .hero-kicker::before {
+        content: "";
+        width: 24px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .hero-h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(5rem, 12vw, 11rem);
+        line-height: 0.88;
+        letter-spacing: 0.02em;
+        animation: fadeUp 0.9s ease 0.1s both;
+      }
+      .hero-h1 .l1 {
+        display: block;
+        color: var(--white);
+      }
+      .hero-h1 .l2 {
+        display: block;
+        color: var(--orange);
+      }
+      .hero-h1 .l3 {
+        display: block;
+        -webkit-text-stroke: 1px rgba(240, 90, 26, 0.3);
+        color: transparent;
+        font-size: 85%;
+      }
+      .hero-foot {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 3rem;
+        gap: 3rem;
+        flex-wrap: wrap;
+        animation: fadeUp 1s ease 0.25s both;
+      }
+      .hero-desc {
+        max-width: 520px;
+        font-size: 0.92rem;
+        line-height: 1.85;
+        color: var(--gray2);
+        font-weight: 300;
+      }
+      .hero-desc b {
+        color: var(--white);
+        font-weight: 500;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+      }
+      .btn-a {
+        font-family: "Space Mono", monospace;
+        font-size: 0.63rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        background: var(--orange);
+        color: #000;
+        padding: 1rem 2.2rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.25s;
+      }
+      .btn-a:hover {
+        background: var(--orange2);
+        transform: translateY(-2px);
+      }
+      .btn-b {
+        font-family: "Space Mono", monospace;
+        font-size: 0.63rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        background: transparent;
+        color: var(--white);
+        padding: 1rem 2.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.25s;
+      }
+      .btn-b:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+      }
+      .hero-coords {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        color: var(--gray);
+        text-align: right;
+        line-height: 1.9;
+      }
+      .hero-coords .ca {
+        color: var(--orange);
+      }
+
+      /* STATS BAND */
+      .stats-band {
+        position: relative;
+        z-index: 1;
+        background: var(--orange);
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+      }
+      .stat-block {
+        flex: 1;
+        padding: 1.6rem 2.5rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        transition: background 0.2s;
+      }
+      .stat-block:last-child {
+        border-right: none;
+      }
+      .stat-block:hover {
+        background: var(--orange2);
+      }
+      .stat-n {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.8rem;
+        color: #000;
+        line-height: 1;
+      }
+      .stat-t {
+        font-family: "Space Mono", monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.5;
+      }
+
+      /* SECTIONS */
+      section {
+        position: relative;
+        z-index: 1;
+      }
+      .sec-label {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .sec-label::before {
+        content: "//";
+        color: var(--gray);
+      }
+      .sec-h2 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.8rem, 5vw, 4.8rem);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        color: var(--white);
+      }
+      .sec-h2 em {
+        color: var(--orange);
+        font-style: normal;
+      }
+
+      /* NOSOTROS */
+      #nosotros {
+        padding: 8rem 3.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+        align-items: center;
+      }
+      .nos-text p {
+        font-size: 0.9rem;
+        line-height: 1.95;
+        color: var(--gray2);
+        font-weight: 300;
+        margin-top: 1.8rem;
+      }
+      .nos-text p + p {
+        margin-top: 1rem;
+      }
+      .nos-obj {
+        margin-top: 2.5rem;
+        padding: 1.8rem 2rem;
+        border-left: 3px solid var(--orange);
+        background: rgba(240, 90, 26, 0.06);
+      }
+      .nos-obj .obj-lbl {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 0.6rem;
+      }
+      .nos-obj p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+        color: var(--gray2);
+        font-weight: 300;
+        margin-top: 0 !important;
+        font-style: italic;
+      }
+      .nos-box {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 3rem 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .nos-box::before {
+        content: "SONORA";
+        position: absolute;
+        bottom: -1.5rem;
+        right: -0.5rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 7rem;
+        color: rgba(240, 90, 26, 0.05);
+        letter-spacing: 0.05em;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+      .crosshair-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .ch-ring {
+        position: absolute;
+        border: 1px solid rgba(240, 90, 26, 0.2);
+        border-radius: 50%;
+      }
+      .ch-ring:nth-child(1) {
+        width: 140px;
+        height: 140px;
+      }
+      .ch-ring:nth-child(2) {
+        width: 100px;
+        height: 100px;
+      }
+      .ch-ring:nth-child(3) {
+        width: 60px;
+        height: 60px;
+        border-color: rgba(240, 90, 26, 0.35);
+      }
+      .ch-h {
+        position: absolute;
+        width: 160px;
+        height: 1px;
+        background: rgba(240, 90, 26, 0.25);
+      }
+      .ch-v {
+        position: absolute;
+        width: 1px;
+        height: 160px;
+        background: rgba(240, 90, 26, 0.25);
+      }
+      .ch-ctr {
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--orange);
+        transform: rotate(45deg);
+        position: relative;
+        z-index: 1;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: rotate(45deg) scale(1);
+        }
+        50% {
+          opacity: 0.6;
+          transform: rotate(45deg) scale(1.15);
+        }
+      }
+      .nos-specs {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .nos-spec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .nos-spec-k {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+      .nos-spec-v {
+        font-family: "Space Mono", monospace;
+        font-size: 0.62rem;
+        color: var(--orange);
+      }
+
+      /* SERVICIOS */
+      #servicios {
+        padding: 8rem 3.5rem;
+        background: var(--black);
+      }
+      .srv-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 5rem;
+        align-items: end;
+      }
+      .srv-intro {
+        font-size: 0.88rem;
+        line-height: 1.9;
+        color: var(--gray2);
+        font-weight: 300;
+      }
+      .srv-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .srv-card {
+        padding: 2.8rem 2.2rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        position: relative;
+        overflow: hidden;
+        transition: background 0.3s;
+      }
+      .srv-card:hover {
+        background: rgba(240, 90, 26, 0.05);
+      }
+      .srv-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0;
+        background: var(--orange);
+        transition: height 0.4s ease;
+      }
+      .srv-card:hover::after {
+        height: 100%;
+      }
+      .srv-n {
+        font-family: "Space Mono", monospace;
+        font-size: 0.55rem;
+        color: rgba(240, 90, 26, 0.5);
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.1em;
+      }
+      .srv-icon {
+        width: 46px;
+        height: 46px;
+        color: var(--orange);
+        margin-bottom: 1.2rem;
+      }
+      .srv-card h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.06em;
+        color: var(--white);
+        margin-bottom: 0.8rem;
+        line-height: 1.1;
+      }
+      .srv-card p {
+        font-size: 0.78rem;
+        line-height: 1.8;
+        color: var(--gray);
+        font-weight: 300;
+      }
+
+      /* SECTORES */
+      #sectores {
+        padding: 8rem 3.5rem;
+      }
+      .sec-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        margin-top: 4rem;
+      }
+      .sec-card {
+        padding: 2rem 1.2rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.02);
+        transition: all 0.3s;
+        cursor: default;
+      }
+      .sec-card:hover {
+        border-color: var(--orange);
+        background: rgba(240, 90, 26, 0.08);
+        transform: translateY(-4px);
+      }
+      .sec-card svg {
+        width: 36px;
+        height: 36px;
+        color: var(--orange);
+        display: block;
+        margin: 0 auto 1rem;
+        opacity: 0.75;
+      }
+      .sec-card:hover svg {
+        opacity: 1;
+      }
+      .sec-card span {
+        display: block;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        color: var(--gray2);
+      }
+      .sec-card:hover span {
+        color: var(--white);
+      }
+
+      /* PORQUE */
+      #porque {
+        padding: 8rem 3.5rem;
+        background: var(--dark2);
+      }
+      .porq-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 7rem;
+        margin-top: 4rem;
+        align-items: start;
+      }
+      .porq-features {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .porq-feat {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .porq-feat:first-child {
+        padding-top: 0;
+      }
+      .feat-num {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.5rem;
+        color: rgba(240, 90, 26, 0.2);
+        line-height: 1;
+        flex-shrink: 0;
+        width: 48px;
+        transition: color 0.3s;
+      }
+      .porq-feat:hover .feat-num {
+        color: var(--orange);
+      }
+      .feat-body h4 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 0.06em;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      .feat-body p {
+        font-size: 0.8rem;
+        line-height: 1.8;
+        color: var(--gray);
+        font-weight: 300;
+      }
+      .porq-quote {
+        background: var(--dark3);
+        padding: 3.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        position: relative;
+        overflow: hidden;
+      }
+      .porq-quote::before {
+        content: '"';
+        position: absolute;
+        top: -1rem;
+        left: 1.5rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 14rem;
+        color: rgba(240, 90, 26, 0.06);
+        line-height: 1;
+        pointer-events: none;
+      }
+      .porq-quote .q-eyebrow {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 1.5rem;
+      }
+      .porq-quote blockquote {
+        font-size: 1.12rem;
+        line-height: 1.8;
+        color: var(--white);
+        font-weight: 300;
+        font-style: italic;
+        position: relative;
+        z-index: 1;
+      }
+      .porq-quote blockquote strong {
+        color: var(--orange);
+        font-style: normal;
+        font-weight: 500;
+      }
+      .tags {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+      .tag {
+        font-family: "Space Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.45rem 1rem;
+        border: 1px solid rgba(240, 90, 26, 0.35);
+        color: var(--orange);
+        background: rgba(240, 90, 26, 0.07);
+      }
+
+      /* CONTACTO */
+      #contacto {
+        padding: 8rem 3.5rem;
+        background: var(--black);
+      }
+      .cont-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        margin-top: 4rem;
+      }
+      .cont-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+      }
+      .cont-item {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .cont-icon {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        background: rgba(240, 90, 26, 0.1);
+        border: 1px solid rgba(240, 90, 26, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange);
+      }
+      .cont-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+      .cont-lbl {
+        font-family: "Space Mono", monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 0.3rem;
+      }
+      .cont-val {
+        font-size: 0.9rem;
+        color: var(--gray2);
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      .cont-val a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .cont-val a:hover {
+        color: var(--orange);
+      }
+      .cont-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .f-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .f-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .f-lbl {
+        font-family: "Space Mono", monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .f-input,
+      .f-select,
+      .f-textarea {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        padding: 0.85rem 1.1rem;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.25s;
+        resize: none;
+        -webkit-appearance: none;
+      }
+      .f-input:focus,
+      .f-select:focus,
+      .f-textarea:focus {
+        border-color: var(--orange);
+      }
+      .f-select option {
+        background: var(--dark2);
+      }
+      .f-textarea {
+        height: 120px;
+      }
+      .f-submit {
+        background: var(--orange);
+        color: #000;
+        border: none;
+        padding: 1.1rem 2.5rem;
+        cursor: pointer;
+        font-family: "Space Mono", monospace;
+        font-size: 0.63rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        align-self: flex-start;
+        transition: all 0.25s;
+      }
+      .f-submit:hover {
+        background: var(--orange2);
+        transform: translateY(-2px);
+      }
+
+      /* FOOTER */
+      footer {
+        background: #040608;
+        padding: 2.5rem 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        border-top: 1px solid rgba(240, 90, 26, 0.15);
+        position: relative;
+        z-index: 1;
+      }
+      .foot-brand {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .foot-brand span {
+        color: var(--orange);
+      }
+      .foot-copy {
+        font-family: "Space Mono", monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.2);
+        text-align: center;
+      }
+      .foot-social {
+        display: flex;
+        gap: 0.8rem;
+      }
+      .foot-social a {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(240, 90, 26, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange);
+        text-decoration: none;
+        transition: all 0.25s;
+      }
+      .foot-social a:hover {
+        background: var(--orange);
+        color: #000;
+      }
+      .foot-social svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.on {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.1s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.2s;
+      }
+      .reveal.d3 {
+        transition-delay: 0.3s;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--black);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--orange);
+      }
+
+      @media (max-width: 960px) {
+        nav {
+          padding: 0 1.5rem;
+        }
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+        #hero,
+        #nosotros,
+        #servicios,
+        #sectores,
+        #porque,
+        #contacto {
+          padding: 5rem 1.5rem;
+        }
+        #nosotros,
+        .srv-header,
+        .porq-layout,
+        .cont-layout {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .srv-grid {
+          grid-template-columns: 1fr;
+        }
+        .sec-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stats-band {
+          flex-wrap: wrap;
+        }
+        .stat-block {
+          flex: 1 1 50%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+        .hero-h1 {
+          font-size: clamp(3.5rem, 16vw, 7rem);
+        }
+        .f-row {
+          grid-template-columns: 1fr;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        #hero {
+          padding-bottom: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">
+        <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+          <polygon
+            points="20,2 37,11 37,29 20,38 3,29 3,11"
+            fill="none"
+            stroke="#f05a1a"
+            stroke-width="1.8"
+          />
+          <polygon
+            points="20,8 31,14 31,26 20,32 9,26 9,14"
+            fill="none"
+            stroke="#f05a1a"
+            stroke-width="0.8"
+            opacity="0.4"
+          />
+          <line
+            x1="9"
+            y1="20"
+            x2="31"
+            y2="20"
+            stroke="#f05a1a"
+            stroke-width="1.2"
+          />
+          <line
+            x1="20"
+            y1="8"
+            x2="20"
+            y2="32"
+            stroke="#f05a1a"
+            stroke-width="1.2"
+          />
+          <circle cx="20" cy="20" r="3" fill="#f05a1a" />
+        </svg>
+        <div class="nav-wordmark">
+          <span class="t">TOPOGRAFÍA</span>
+          <span class="d"> DE </span>
+          <span class="s">SONORA</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#porque">¿Por qué nosotros?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button
+        class="nav-cta"
+        onclick="
+          document
+            .getElementById('contacto')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Solicitar Cotización
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <canvas class="hero-canvas" id="topoCanvas"></canvas>
+
+      <svg class="hero-cross" viewBox="0 0 600 600" fill="none">
+        <circle cx="300" cy="300" r="280" stroke="#f05a1a" stroke-width="1" />
+        <circle
+          cx="300"
+          cy="300"
+          r="220"
+          stroke="#f05a1a"
+          stroke-width="0.6"
+          stroke-dasharray="6 8"
+        />
+        <circle cx="300" cy="300" r="160" stroke="#f05a1a" stroke-width="1" />
+        <circle
+          cx="300"
+          cy="300"
+          r="100"
+          stroke="#f05a1a"
+          stroke-width="0.6"
+          stroke-dasharray="4 6"
+        />
+        <circle cx="300" cy="300" r="40" stroke="#f05a1a" stroke-width="1.5" />
+        <line
+          x1="0"
+          y1="300"
+          x2="600"
+          y2="300"
+          stroke="#f05a1a"
+          stroke-width="0.8"
+        />
+        <line
+          x1="300"
+          y1="0"
+          x2="300"
+          y2="600"
+          stroke="#f05a1a"
+          stroke-width="0.8"
+        />
+        <line
+          x1="80"
+          y1="80"
+          x2="130"
+          y2="80"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="80"
+          y1="80"
+          x2="80"
+          y2="130"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="520"
+          y1="80"
+          x2="470"
+          y2="80"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="520"
+          y1="80"
+          x2="520"
+          y2="130"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="80"
+          y1="520"
+          x2="130"
+          y2="520"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="80"
+          y1="520"
+          x2="80"
+          y2="470"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="520"
+          y1="520"
+          x2="470"
+          y2="520"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <line
+          x1="520"
+          y1="520"
+          x2="520"
+          y2="470"
+          stroke="#f05a1a"
+          stroke-width="1.5"
+        />
+        <rect
+          x="286"
+          y="286"
+          width="28"
+          height="28"
+          stroke="#f05a1a"
+          stroke-width="2"
+          transform="rotate(45 300 300)"
+        />
+      </svg>
+
+      <div class="hero-content">
+        <div class="hero-kicker">Noroeste de México — Hermosillo, Sonora</div>
+        <h1 class="hero-h1">
+          <span class="l1">PRECISIÓN</span>
+          <span class="l2">EN CADA</span>
+          <span class="l3">PROYECTO</span>
+        </h1>
+        <div class="hero-foot">
+          <p class="hero-desc">
+            Equipo técnico de <b>vanguardia</b> y personal altamente capacitado
+            para proyectos de Ingeniería Civil, Minera, Agrícola, Industrial y
+            Arquitectónica en todo el <b>noroeste de México</b>.
+          </p>
+          <div class="hero-btns">
+            <a href="#contacto" class="btn-a">Solicitar Cotización</a>
+            <a href="#servicios" class="btn-b">Ver Servicios</a>
+          </div>
+          <div class="hero-coords">
+            <span class="ca">LAT 29°05'N</span>
+            <span>LON 110°57'W</span>
+            <span>ALT 215 m.s.n.m.</span>
+            <span>SONORA, MX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-band">
+      <div class="stat-block">
+        <div class="stat-n">5+</div>
+        <div class="stat-t">Sectores<br />Atendidos</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-n">100%</div>
+        <div class="stat-t">Precisión<br />Garantizada</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-n">NW</div>
+        <div class="stat-t">Cobertura<br />Noroeste México</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-n">24/7</div>
+        <div class="stat-t">Atención<br />a Proyectos</div>
+      </div>
+    </div>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+      <div class="nos-text reveal">
+        <div class="sec-label">Quiénes Somos</div>
+        <h2 class="sec-h2">SOLUCIONES<br /><em>INTEGRALES</em></h2>
+        <p>
+          En
+          <strong style="color: var(--white)">Topografía de Sonora</strong>
+          ponemos a disposición de nuestros clientes equipo técnico de
+          vanguardia y personal altamente capacitado para atender proyectos en
+          todo el noroeste de México.
+        </p>
+        <p>
+          Brindamos soluciones integrales en los sectores de la Ingeniería
+          Civil, Minera, Agrícola, Industrial y Arquitectónica, participando en
+          obras de vías terrestres, urbanizaciones, minas, naves industriales,
+          presas, desarrollos turísticos, obras de comunicación y construcción
+          en general.
+        </p>
+        <div class="nos-obj">
+          <div class="obj-lbl">Nuestro Objetivo</div>
+          <p>
+            Garantizar la calidad, el profesionalismo, la precisión y la
+            eficiencia en la ejecución de cada uno de nuestros trabajos,
+            brindando soluciones confiables que superen las expectativas de
+            nuestros clientes.
+          </p>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="nos-box">
+          <div class="crosshair-wrap">
+            <div class="ch-ring"></div>
+            <div class="ch-ring"></div>
+            <div class="ch-ring"></div>
+            <div class="ch-h"></div>
+            <div class="ch-v"></div>
+            <div class="ch-ctr"></div>
+          </div>
+          <div class="nos-specs">
+            <div class="nos-spec">
+              <span class="nos-spec-k">Cobertura</span
+              ><span class="nos-spec-v">Noroeste de México</span>
+            </div>
+            <div class="nos-spec">
+              <span class="nos-spec-k">Equipamiento</span
+              ><span class="nos-spec-v">Tecnología de Vanguardia</span>
+            </div>
+            <div class="nos-spec">
+              <span class="nos-spec-k">Personal</span
+              ><span class="nos-spec-v">Altamente Capacitado</span>
+            </div>
+            <div class="nos-spec">
+              <span class="nos-spec-k">Sectores</span
+              ><span class="nos-spec-v">Civil · Minero · Agrícola</span>
+            </div>
+            <div class="nos-spec">
+              <span class="nos-spec-k">Enfoque</span
+              ><span class="nos-spec-v">Precisión + Eficiencia</span>
+            </div>
+            <div class="nos-spec">
+              <span class="nos-spec-k">Redes sociales</span
+              ><span class="nos-spec-v">@TOPOGRAFIADESONORA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="srv-header">
+        <div class="reveal">
+          <div class="sec-label">Lo que hacemos</div>
+          <h2 class="sec-h2">NUESTROS<br /><em>SERVICIOS</em></h2>
+        </div>
+        <p class="srv-intro reveal d1">
+          Ejecutamos trabajos topográficos con la más alta precisión, desde
+          levantamientos iniciales hasta control y seguimiento de obra, con
+          tecnología de punta y un equipo comprometido con cada proyecto.
+        </p>
+      </div>
+      <div class="srv-grid reveal">
+        <div class="srv-card">
+          <div class="srv-n">01 / LEVANTAMIENTOS</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+          </svg>
+          <h3>Levantamientos Topográficos</h3>
+          <p>
+            Levantamientos planimétricos y altimétricos de precisión para
+            predios, obras civiles y proyectos de ingeniería. Entrega de planos
+            en AutoCAD y formatos digitales.
+          </p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-n">02 / DESLINDES</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <rect x="3" y="3" width="18" height="18" />
+            <path d="M3 9h18M3 15h18M9 3v18M15 3v18" />
+          </svg>
+          <h3>Deslindes y Lotificación</h3>
+          <p>
+            Delimitación y definición de linderos, lotificación de
+            fraccionamientos, subdivisiones y regularización de predios ante
+            instancias municipales y catastrales.
+          </p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-n">03 / TRAZO Y NIVELACIÓN</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <path d="M2 20h20M4 20V10l8-8 8 8v10" />
+            <path d="M9 20v-6h6v6" />
+          </svg>
+          <h3>Trazo y Nivelación de Obra</h3>
+          <p>
+            Control topográfico en campo durante la ejecución de obra, trazos de
+            ejes, nivelación de plataformas, vialidades y estructuras conforme a
+            proyecto ejecutivo.
+          </p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-n">04 / VOLUMETRÍAS</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+            />
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+            <line x1="12" y1="22.08" x2="12" y2="12" />
+          </svg>
+          <h3>Cálculo de Volúmenes</h3>
+          <p>
+            Cálculo y verificación de movimiento de tierras, cortes, rellenos y
+            cubicaciones para obras civiles, mineras y proyectos de terracería y
+            vías terrestres.
+          </p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-n">05 / CONTROL DE OBRA</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+          <h3>Supervisión y Control</h3>
+          <p>
+            Supervisión topográfica continua en proyectos de construcción,
+            minería y obra civil, garantizando cumplimiento de especificaciones
+            de diseño en cada etapa.
+          </p>
+        </div>
+        <div class="srv-card">
+          <div class="srv-n">06 / VÍAS TERRESTRES</div>
+          <svg
+            class="srv-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.3"
+          >
+            <path
+              d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-2"
+            />
+            <circle cx="9" cy="17" r="2" />
+            <circle cx="17" cy="17" r="2" />
+          </svg>
+          <h3>Vías Terrestres</h3>
+          <p>
+            Proyectos de caminos, carreteras, terracerías y obras de
+            comunicación: trazos de ejes, perfiles longitudinales, secciones
+            transversales y curvas de nivel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTORES -->
+    <section id="sectores">
+      <div class="reveal">
+        <div class="sec-label">Industrias que Atendemos</div>
+        <h2 class="sec-h2">SECTORES<br /><em>PRODUCTIVOS</em></h2>
+      </div>
+      <div class="sec-grid reveal d1">
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M2 20h20M4 20V10l8-8 8 8v10" />
+          </svg>
+          <span>Ingeniería Civil</span>
+        </div>
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          <span>Minería</span>
+        </div>
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M12 22V12M17 7s0-5-5-5-5 5-5 5" />
+            <path d="M3 22h18M5 12h2M17 12h2" />
+          </svg>
+          <span>Agrícola</span>
+        </div>
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <rect x="2" y="7" width="20" height="14" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Industrial</span>
+        </div>
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Arquitectónica</span>
+        </div>
+        <div class="sec-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"
+            />
+          </svg>
+          <span>Turístico</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ -->
+    <section id="porque">
+      <div class="reveal">
+        <div class="sec-label">Nuestra Diferencia</div>
+        <h2 class="sec-h2">¿POR QUÉ<br /><em>ELEGIRNOS?</em></h2>
+      </div>
+      <div class="porq-layout">
+        <div class="porq-features reveal d1">
+          <div class="porq-feat">
+            <div class="feat-num">01</div>
+            <div class="feat-body">
+              <h4>Equipo de Vanguardia</h4>
+              <p>
+                Operamos con tecnología topográfica de última generación:
+                estaciones totales, GPS diferencial, drones y software
+                especializado para resultados de alta precisión.
+              </p>
+            </div>
+          </div>
+          <div class="porq-feat">
+            <div class="feat-num">02</div>
+            <div class="feat-body">
+              <h4>Personal Especializado</h4>
+              <p>
+                Equipo de ingenieros y técnicos altamente capacitados con amplia
+                experiencia en campo en todos los sectores productivos del
+                noroeste del país.
+              </p>
+            </div>
+          </div>
+          <div class="porq-feat">
+            <div class="feat-num">03</div>
+            <div class="feat-body">
+              <h4>Cobertura Regional</h4>
+              <p>
+                Atendemos proyectos en todo el noroeste de México. Brigadas
+                móviles listas para movilizarse a cualquier punto de la región
+                con equipo completo.
+              </p>
+            </div>
+          </div>
+          <div class="porq-feat">
+            <div class="feat-num">04</div>
+            <div class="feat-body">
+              <h4>Soluciones Integrales</h4>
+              <p>
+                Desde el levantamiento inicial hasta la entrega de planos y
+                reportes finales, cubrimos todas las etapas del proceso
+                topográfico en un solo proveedor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="porq-quote reveal d2">
+          <div class="q-eyebrow">// Nuestro Compromiso</div>
+          <blockquote>
+            "Garantizar la <strong>calidad</strong>, el
+            <strong>profesionalismo</strong>, la <strong>precisión</strong> y la
+            <strong>eficiencia</strong> en la ejecución de cada uno de nuestros
+            trabajos, brindando soluciones confiables que superen las
+            expectativas de nuestros clientes."
+          </blockquote>
+          <div class="tags">
+            <span class="tag">GPS Diferencial</span>
+            <span class="tag">Estación Total</span>
+            <span class="tag">Nivel Electrónico</span>
+            <span class="tag">AutoCAD / Civil 3D</span>
+            <span class="tag">Fotogrametría</span>
+            <span class="tag">Brigadas Móviles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="reveal">
+        <div class="sec-label">Hablemos de su Proyecto</div>
+        <h2 class="sec-h2">SOLICITE SU<br /><em>COTIZACIÓN</em></h2>
+      </div>
+      <div class="cont-layout">
+        <div class="cont-info reveal d1">
+          <div class="cont-item">
+            <div class="cont-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <div class="cont-lbl">Ubicación</div>
+              <div class="cont-val">
+                Hermosillo, Sonora<br />Noroeste de México
+              </div>
+            </div>
+          </div>
+          <div class="cont-item">
+            <div class="cont-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="cont-lbl">Facebook</div>
+              <div class="cont-val">
+                <a
+                  href="https://www.facebook.com/TOPOGRAFIADESONORA/"
+                  target="_blank"
+                  >facebook.com/TOPOGRAFIADESONORA</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cont-item">
+            <div class="cont-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="cont-lbl">Teléfono / WhatsApp</div>
+              <div class="cont-val">
+                Contáctenos vía Facebook<br />para número directo
+              </div>
+            </div>
+          </div>
+          <div class="cont-item">
+            <div class="cont-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div>
+              <div class="cont-lbl">Horario</div>
+              <div class="cont-val">
+                Lunes – Viernes: 8:00 – 18:00<br />Sábado: 9:00 – 13:00
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cont-form reveal d2">
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-lbl">Nombre Completo</label>
+              <input class="f-input" type="text" placeholder="Su nombre" />
+            </div>
+            <div class="f-group">
+              <label class="f-lbl">Empresa / Organización</label>
+              <input class="f-input" type="text" placeholder="Opcional" />
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-lbl">Teléfono</label>
+              <input class="f-input" type="tel" placeholder="662 XXX XXXX" />
+            </div>
+            <div class="f-group">
+              <label class="f-lbl">Correo Electrónico</label>
+              <input
+                class="f-input"
+                type="email"
+                placeholder="correo@empresa.com"
+              />
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="f-lbl">Sector / Tipo de Proyecto</label>
+            <select class="f-select">
+              <option value="" disabled selected>Seleccione un sector</option>
+              <option>Ingeniería Civil</option>
+              <option>Minería</option>
+              <option>Agrícola</option>
+              <option>Industrial</option>
+              <option>Arquitectónica</option>
+              <option>Vías Terrestres</option>
+              <option>Desarrollo Turístico</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label class="f-lbl">Descripción del Proyecto</label>
+            <textarea
+              class="f-textarea"
+              placeholder="Ubicación, superficie aproximada, servicio requerido..."
+            ></textarea>
+          </div>
+          <button class="f-submit" onclick="submitForm(this)">
+            Enviar Solicitud →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-brand">TOPOGRAFÍA <span>DE SONORA</span></div>
+      <div class="foot-copy">
+        © 2025 Topografía de Sonora · Noroeste de México · Precisión en cada
+        proyecto
+      </div>
+      <div class="foot-social">
+        <a href="https://www.facebook.com/TOPOGRAFIADESONORA/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </svg>
+        </a>
+        <a href="#contacto">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // SCROLL REVEAL
+      const revEls = document.querySelectorAll(".reveal");
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("on");
+          });
+        },
+        { threshold: 0.1 },
+      ).observe
+        ? (() => {
+            const io = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((e) => {
+                  if (e.isIntersecting) e.target.classList.add("on");
+                });
+              },
+              { threshold: 0.1 },
+            );
+            revEls.forEach((el) => io.observe(el));
+          })()
+        : revEls.forEach((el) => el.classList.add("on"));
+
+      // TOPOGRAPHIC CANVAS
+      (function () {
+        const canvas = document.getElementById("topoCanvas");
+        const ctx = canvas.getContext("2d");
+        let W,
+          H,
+          contours = [],
+          animId;
+
+        function resize() {
+          W = canvas.width = canvas.offsetWidth;
+          H = canvas.height = canvas.offsetHeight;
+          buildContours();
+        }
+
+        function buildContours() {
+          contours = [];
+          const N = 12;
+          const cx = W * 0.62,
+            cy = H * 0.5;
+          for (let i = 0; i < N; i++) {
+            const pts = [];
+            const rx = W * 0.04 + i * W * 0.055;
+            const ry = H * 0.03 + i * H * 0.042;
+            const n = 72;
+            for (let j = 0; j < n; j++) {
+              const a = (j / n) * Math.PI * 2;
+              const r =
+                1 +
+                (Math.sin(a * 3 + i) * 0.12 + Math.cos(a * 5 - i * 0.7) * 0.08);
+              pts.push([cx + Math.cos(a) * rx * r, cy + Math.sin(a) * ry * r]);
+            }
+            contours.push(pts);
+          }
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          contours.forEach((pts, ci) => {
+            ctx.strokeStyle = `rgba(240, 90, 26, ${0.03 + ci * 0.006})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(pts[0][0], pts[0][1]);
+            for (let i = 1; i < pts.length; i++)
+              ctx.lineTo(pts[i][0], pts[i][1]);
+            ctx.closePath();
+            ctx.stroke();
+          });
+        }
+
+        window.addEventListener("resize", () => {
+          cancelAnimationFrame(animId);
+          resize();
+          draw();
+        });
+        resize();
+        draw();
+      })();
+
+      // FORM
+      function submitForm(btn) {
+        const name = btn.closest(".cont-form").querySelector(".f-input").value;
+        if (!name.trim()) {
+          alert("Por favor ingrese su nombre.");
+          return;
+        }
+        btn.textContent = "✓ Solicitud Enviada";
+        btn.style.background = "#1a6e42";
+        btn.style.color = "#fff";
+        btn.disabled = true;
+      }
+    </script>
+  </body>
+</html>
