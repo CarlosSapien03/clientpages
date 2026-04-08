@@ -1,0 +1,1795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexible Staffing Services LLC – Bookkeeping & Tax Prep</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">Flexible Staffing <span>Services</span> LLC</div>
+      <ul class="nav-links">
+        <li><a href="#solution">How it works</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#who">Who we serve</a></li>
+        <li><a href="#trust">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Get started</a></li>
+         <!--BANDERITA USA -->
+            <li><a href="index-es.html">
+                <img
+                  src="assets/imgs/mexico_circular.png"
+                  alt="Español"
+                  style="width: 30px; height: 28px"
+                />
+              </a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#solution">How it works</a>
+      <a href="#services">Services</a>
+      <a href="#who">Who we serve</a>
+      <a href="#trust">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="mob-cta">Get started</a>
+      <!--BANDERITA USA -->
+            <a href="index-es.html">
+                <img
+                  src="assets/imgs/mexico_circular.png"
+                  alt="Español"
+                  style="width: 30px; height: 28px"
+                />
+              </a>
+
+       <!--BANDERITA USA -->
+             <a href="index-es.html">
+                <img
+                  src="assets/imgs/mexico_circular.png"
+                  alt="English"
+                  style="width: 30px; height: 28px"
+                />
+              </a>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-left">
+        <p class="hero-eyebrow">
+          Bookkeeping · Tax Preparation · Financial Order
+        </p>
+        <h1>
+          Your books in order.<br />Your tax return<br /><em>ready on time.</em>
+        </h1>
+        <p class="hero-sub">
+          We help individuals and businesses across the U.S. keep clean,
+          accurate books year-round — so when tax season comes, there are no
+          surprises and no money left on the table.
+        </p>
+        <div class="btn-group">
+          <a href="#contact" class="btn-primary"
+            >Schedule a free consultation</a
+          >
+          <a href="#services" class="btn-ghost">See our services</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Accuracy guaranteed</div>
+          </div>
+          <div>
+            <div class="stat-num">Year‑round</div>
+            <div class="stat-label">Support</div>
+          </div>
+          <div>
+            <div class="stat-num">Ind. &amp; Biz</div>
+            <div class="stat-label">We serve both</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <!-- REPLACE: swap the div below for <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover"/> -->
+          <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Replace with your photo
+          </div>
+          <div class="hero-img-badge">
+            <div class="badge-big-num">FSS</div>
+            <div class="badge-big-label">Flexible Staffing Services LLC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TICKER ── -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item">Bookkeeping</span>
+        <span class="ticker-item">Tax Preparation</span>
+        <span class="ticker-item">Bank Reconciliation</span>
+        <span class="ticker-item">Financial Statements</span>
+        <span class="ticker-item">Catch-Up Bookkeeping</span>
+        <span class="ticker-item">1099 &amp; W-2 Support</span>
+        <span class="ticker-item">Individuals &amp; Businesses</span>
+        <span class="ticker-item">Year-round Support</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">Bookkeeping</span>
+        <span class="ticker-item">Tax Preparation</span>
+        <span class="ticker-item">Bank Reconciliation</span>
+        <span class="ticker-item">Financial Statements</span>
+        <span class="ticker-item">Catch-Up Bookkeeping</span>
+        <span class="ticker-item">1099 &amp; W-2 Support</span>
+        <span class="ticker-item">Individuals &amp; Businesses</span>
+        <span class="ticker-item">Year-round Support</span>
+      </div>
+    </div>
+
+    <!-- ── SOLUTION ── -->
+    <section class="solution" id="solution">
+      <p class="section-tag">How we help</p>
+      <h2 class="section-title">
+        Clean books today.<br />Stress-free tax return tomorrow.
+      </h2>
+      <div class="divider"></div>
+      <div class="solution-inner">
+        <div class="solution-img-wrap">
+          <!-- REPLACE with your image -->
+          <div class="img-placeholder">
+          <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Replace with your photo
+          </div>
+        </div>
+        <div>
+          <p class="section-sub" style="margin-bottom: 2rem">
+            Most people reach tax season with messy records, missing receipts,
+            and a last-minute rush. We fix that. We keep your finances organized
+            throughout the year so your tax return is straightforward, accurate,
+            and filed on time — every time.
+          </p>
+          <div class="solution-points">
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Organized records, all year long</h4>
+                <p>
+                  We categorize your income and expenses regularly so nothing
+                  gets lost and everything is ready when you need it.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Tax return, done right</h4>
+                <p>
+                  Because your books are always up to date, preparing your
+                  return is smooth and fast — no scrambling for documents.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>For individuals and businesses alike</h4>
+                <p>
+                  Freelancer, sole proprietor, LLC, or growing company — we
+                  tailor our services to your situation.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>No jargon, just clarity</h4>
+                <p>
+                  We explain everything in plain English. You'll always know the
+                  state of your finances without needing an accounting degree.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#contact"
+            class="btn-primary"
+            style="display: inline-block; margin-top: 2rem"
+            >Request a free consultation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="process" id="process">
+      <p class="section-tag">How it works</p>
+      <h2 class="section-title">
+        Four simple steps to<br />financial peace of mind.
+      </h2>
+      <div class="divider"></div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">◎</div>
+          <h3>Free consultation</h3>
+          <p>
+            We start with a quick call to understand your situation — your
+            business type, current state of your books, and what you need.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">◎</div>
+          <h3>We review your records</h3>
+          <p>
+            You share your existing financial documents. We assess what's in
+            order, what's missing, and what needs to be cleaned up.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">◎</div>
+          <h3>We get to work</h3>
+          <p>
+            We organize, categorize, and reconcile your books. If you're behind,
+            we catch you up. Then we maintain your records going forward.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">◎</div>
+          <h3>Tax return, filed on time</h3>
+          <p>
+            When tax season arrives, your books are already clean. We prepare
+            and file your return accurately, with no last-minute stress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="services" id="services">
+      <div class="services-header">
+        <div>
+          <p class="section-tag">What we offer</p>
+          <h2 class="section-title">Our services</h2>
+        </div>
+        <p
+          style="max-width: 280px; font-size: 0.9rem; color: var(--gray-light)"
+        >
+          Clear services built around keeping your finances in order and your
+          tax return ready — all year long.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <span class="service-arrow">↗</span>
+          <h3>Monthly Bookkeeping</h3>
+          <p>
+            We record and categorize every transaction — income, expenses, and
+            everything in between — keeping your books accurate every month.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <span class="service-arrow">↗</span>
+          <h3>Bank Reconciliation</h3>
+          <p>
+            We match your records against your bank statements to catch errors,
+            duplicates, or missing entries before they become a problem.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <span class="service-arrow">↗</span>
+          <h3>Tax Return Preparation</h3>
+          <p>
+            With your books already clean, we prepare and file your federal and
+            state returns accurately and on time — for individuals and
+            businesses.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <span class="service-arrow">↗</span>
+          <h3>Financial Statements</h3>
+          <p>
+            Profit &amp; loss reports, balance sheets, and cash flow statements
+            that give you a clear picture of your financial health.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <span class="service-arrow">↗</span>
+          <h3>Catch-Up Bookkeeping</h3>
+          <p>
+            Behind on your books? We'll go back and clean up your records —
+            months or even a full year — so you can start fresh with everything
+            in order.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <span class="service-arrow">↗</span>
+          <h3>1099 &amp; W-2 Support</h3>
+          <p>
+            We help you prepare and organize the forms you need for contractors
+            and employees, keeping you compliant and ready for tax season.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHO WE SERVE ── -->
+    <section class="who" id="who">
+      <p class="section-tag">Who we work with</p>
+      <h2 class="section-title">
+        Built for individuals<br />and businesses alike.
+      </h2>
+      <div class="divider"></div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-card-img">
+            <!-- REPLACE with your image -->
+            <div class="img-placeholder" style="border-radius: 0">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Replace with photo
+            </div>
+          </div>
+          <div class="who-card-overlay"></div>
+          <div class="who-card-body">
+            <div class="who-tag">For individuals</div>
+            <h3>Freelancers &amp; independent earners</h3>
+            <p>
+              Whether you're self-employed, a contractor, or earning income from
+              multiple sources — we keep your personal finances organized and
+              your tax return stress-free.
+            </p>
+            <ul class="who-list">
+              <li>Freelancers &amp; gig workers</li>
+              <li>Independent contractors</li>
+              <li>Sole proprietors</li>
+              <li>Anyone filing with self-employment income</li>
+            </ul>
+          </div>
+        </div>
+        <div class="who-card">
+          <div class="who-card-img">
+            <!-- REPLACE with your image -->
+            <div class="img-placeholder" style="border-radius: 0">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Replace with photo
+            </div>
+          </div>
+          <div class="who-card-overlay"></div>
+          <div class="who-card-body">
+            <div class="who-tag">For businesses</div>
+            <h3>LLCs, S-Corps &amp; growing companies</h3>
+            <p>
+              Running a business means your books need to be clean and current —
+              not just at year-end. We handle the financial side so you can
+              focus on operations and growth.
+            </p>
+            <ul class="who-list">
+              <li>Single-member &amp; multi-member LLCs</li>
+              <li>S-Corps &amp; C-Corps</li>
+              <li>Small businesses with employees</li>
+              <li>Startups &amp; growing teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NUMBERS ── -->
+    <div class="numbers">
+      <div class="numbers-grid">
+        <div class="number-item">
+          <div class="number-big">100%</div>
+          <div class="number-label">Accuracy guaranteed</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">12</div>
+          <div class="number-label">Months of support per year</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">2</div>
+          <div class="number-label">Types of clients served</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">0</div>
+          <div class="number-label">Surprise fees</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TRUST ── -->
+    <section class="trust" id="trust">
+      <p class="section-tag">Why clients trust us</p>
+      <h2 class="section-title">
+        Reliable, accurate,<br />and always on your side.
+      </h2>
+      <div class="divider"></div>
+      <div class="trust-inner">
+        <div class="trust-img-wrap">
+          <!-- REPLACE with team photo or office image -->
+          <div class="img-placeholder">
+                      <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Replace with your photo
+          </div>
+        </div>
+        <div class="trust-right">
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">
+                  Experienced with individuals &amp; businesses
+                </div>
+                <div class="badge-desc">
+                  We work with freelancers, sole proprietors, LLCs, and small
+                  companies — adapting to what each client actually needs.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Year-round availability</div>
+                <div class="badge-desc">
+                  We don't disappear after tax season. Your books are maintained
+                  every month so you're always ready — not just in April.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Clear communication</div>
+                <div class="badge-desc">
+                  No jargon. We explain your finances in plain English and keep
+                  you informed every step of the way.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Confidential &amp; secure</div>
+                <div class="badge-desc">
+                  Your financial information is handled with full discretion. We
+                  take privacy seriously and treat every client's data with
+                  care.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="testimonials-section" id="testimonials">
+      <p class="section-tag">What clients say</p>
+      <h2 class="section-title">Real results, real people.</h2>
+      <div class="divider"></div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "I used to dread tax season every year. Since working with Flexible
+            Staffing Services, everything is already organized when the time
+            comes. It's a huge weight off my shoulders."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Maria R.</div>
+              <div class="author-role">Freelance Designer, Texas</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "They caught a reconciliation error that would have cost us nearly
+            $3,000. The attention to detail is unlike anything we've experienced
+            with other bookkeepers."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JT</div>
+            <div>
+              <div class="author-name">James T.</div>
+              <div class="author-role">Owner, Small Logistics Co.</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "I had two years of messy records and they cleaned everything up
+            without making me feel judged. Professional, fast, and genuinely
+            helpful."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AL</div>
+            <div>
+              <div class="author-name">Andrea L.</div>
+              <div class="author-role">Independent Contractor, Florida</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "We went from scrambling every April to having our tax return filed
+            weeks early. The peace of mind alone is worth every penny."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DK</div>
+            <div>
+              <div class="author-name">David K.</div>
+              <div class="author-role">LLC Owner, California</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "As a freelancer, I was always confused about what I could deduct.
+            They walked me through everything and made sure I wasn't overpaying.
+            Saved me hundreds."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div>
+              <div class="author-name">Carlos R.</div>
+              <div class="author-role">Freelance Developer, New York</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Switching to Flexible Staffing Services was the best business
+            decision I made last year. My books are clean, my stress is down,
+            and my accountant loves us now."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <div class="author-name">Sarah K.</div>
+              <div class="author-role">Boutique Owner, Georgia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" id="faq">
+      <p class="section-tag">Common questions</p>
+      <h2 class="section-title">Everything you need<br />to know.</h2>
+      <div class="divider"></div>
+      <div class="faq-inner">
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-q">
+              What exactly is bookkeeping, and why do I need it?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Bookkeeping is the process of recording and organizing every
+                financial transaction in your business or personal finances —
+                income, expenses, payments, and receipts. Without it, you're
+                flying blind. Clean books make it possible to file your taxes
+                accurately, spot cash flow issues early, and make confident
+                financial decisions.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Do you work with individuals or just businesses?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Both. We work with freelancers, independent contractors, sole
+                proprietors, LLCs, S-Corps, and small businesses. Whether you're
+                a single person with self-employment income or a growing company
+                with employees, we tailor our services to fit your situation.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              My books are a mess. Can you still help?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Absolutely — that's one of the most common situations we deal
+                with. We offer catch-up bookkeeping services to go back through
+                your records, clean everything up, and get you fully current. We
+                don't judge; we just fix it.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              How does the process work? Where do I start?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Start with a free consultation. We'll talk about your situation,
+                assess what you need, and put together a plan. From there, you
+                share your financial documents and we get to work. The whole
+                onboarding process is straightforward and we walk you through
+                every step.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Do I need to provide anything to get started?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                We'll need access to your bank statements, existing records (if
+                any), and a few basic details about your income and expenses.
+                We'll give you a clear checklist after your consultation so you
+                know exactly what to gather — nothing more than what's
+                necessary.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              How much does it cost? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Pricing depends on the scope of work — the complexity of your
+                finances, how many transactions you have per month, and which
+                services you need. We don't have hidden fees. Everything is
+                discussed and agreed upon upfront. Reach out and we'll give you
+                a clear, honest quote.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-img-wrap">
+          <!-- REPLACE with your image -->
+          <div class="img-placeholder">
+                      <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Replace with your photo
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ── -->
+    <div class="cta-banner">
+      <div class="cta-banner-text">
+        <h2>Ready to stop stressing<br />about your finances?</h2>
+        <p>Get a free consultation — no commitment, no pressure.</p>
+      </div>
+      <div class="cta-banner-btns">
+        <a href="#contact" class="btn-primary">Schedule a free consultation</a>
+        <a href="mailto:bobby@flexbpo.com" class="btn-ghost"
+          >Email us directly</a
+        >
+      </div>
+    </div>
+
+    <!-- ── CONTACT ── -->
+    <section class="contact" id="contact">
+      <p class="section-tag">Get in touch</p>
+      <h2 class="section-title">
+        Let's get your finances<br />in order — starting today.
+      </h2>
+      <div class="divider"></div>
+      <div class="contact-wrap">
+        <div class="contact-info-block">
+          <p class="section-sub" style="margin-bottom: 2.5rem">
+            Reach out for a free consultation. We'll take a look at your
+            situation and tell you exactly how we can help — no commitment
+            required.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-icon">@</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">
+                <a href="mailto:bobby@flexbpo.com">bobby@flexbpo.com</a>
+                 <br><a href="mailto:valenciaroberto@me.com"
+                  >valenciaroberto@me.com</a
+                >
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-detail">
+            <div class="contact-icon">⊕</div>
+            <div>
+              <div class="contact-label">We serve</div>
+              <div class="contact-val">
+                Individuals &amp; businesses across the U.S.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First name</label><input type="text" placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label>Last name</label><input type="text" placeholder="Smith" />
+            </div>
+            <!--<div class="form-group full">
+              <label>I am a…</label>
+              <select>
+                <option value="" disabled selected>
+                  Select your situation
+                </option>
+                <option>Individual / Freelancer</option>
+                <option>Sole Proprietor</option>
+                <option>LLC or Corporation</option>
+                <option>Other</option>
+              </select>
+            </div>-->
+            <div class="form-group full">
+              <label>Company name (if applicable)</label
+              ><input type="text" placeholder="Acme LLC" />
+            </div>
+            <div class="form-group full">
+              <label>Email address</label
+              ><input type="email" placeholder="john@email.com" />
+            </div>
+            <div class="form-group full">
+              <label>Phone number</label
+              ><input type="tel" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group full">
+              <label>How can we help? (optional)</label
+              ><textarea
+                rows="4"
+                placeholder=""
+              ></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="button">Send message →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            Flexible Staffing <span>Services</span> LLC
+          </div>
+          <p class="footer-tagline">
+            Bookkeeping and tax preparation for individuals and businesses
+            across the United States. Clean books, stress-free tax season.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Monthly Bookkeeping</a></li>
+            <li><a href="#services">Bank Reconciliation</a></li>
+            <li><a href="#services">Tax Return Preparation</a></li>
+            <li><a href="#services">Catch-Up Bookkeeping</a></li>
+            <li><a href="#services">1099 &amp; W-2 Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:bobby@flexbpo.com">bobby@flexbpo.com</a></li>
+            <li>
+              <a href="mailto:valenciaroberto@me.com">valenciaroberto@me.com</a>
+            </li>
+            <li><a href="#contact">Free consultation</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2025 Flexible Staffing Services LLC · Bookkeeping &amp; Tax
+          Preparation
+        </div>
+        <div class="footer-copy">
+          Serving individuals &amp; businesses across the United States
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          mobileMenu.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = mobileMenu.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexible Staffing Services LLC – Contabilidad y Preparación de Impuestos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">Flexible Staffing <span>Services</span> LLC</div>
+      <ul class="nav-links">
+        <li><a href="#solution">Cómo funciona</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#who">A quién servimos</a></li>
+        <li><a href="#trust">Nosotros</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#contact" class="nav-cta">Comenzar</a></li>
+         <!--BANDERITA USA -->
+            <li>  <a href="index.html">
+                <img
+                  src="assets/imgs/united-states-circular.png"
+                  alt="English"
+                  style="width: 30px; height: 28px"
+                />
+              </a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#solution">Cómo funciona</a>
+      <a href="#services">Servicios</a>
+      <a href="#who">A quién servimos</a>
+      <a href="#trust">Nosotros</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#contact" class="mob-cta">Comenzar</a>
+      <!--BANDERITA USA -->
+            <a href="index.html">
+                <img
+                  src="assets/imgs/united-states-circular.png"
+                  alt="English"
+                  style="width: 30px; height: 28px"
+                />
+              </a>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-left">
+        <p class="hero-eyebrow">
+          Contabilidad · Preparación de Impuestos · Orden Financiero
+        </p>
+        <h1>
+          Tus finanzas en orden.<br />Tu declaración de impuestos<br /><em>lista a tiempo.</em>
+        </h1>
+        <p class="hero-sub">
+          Ayudamos a personas y empresas en todo EE. UU. a mantener registros
+          contables limpios y precisos durante todo el año — para que cuando
+          llegue la temporada de impuestos, no haya sorpresas ni dinero
+          desperdiciado.
+        </p>
+        <div class="btn-group">
+          <a href="#contact" class="btn-primary"
+            >Agendar una consulta gratuita</a
+          >
+          <a href="#services" class="btn-ghost">Ver nuestros servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Precisión garantizada</div>
+          </div>
+          <div>
+            <div class="stat-num">Todo el año</div>
+            <div class="stat-label">Soporte continuo</div>
+          </div>
+          <div>
+            <div class="stat-num">Per. y Emp.</div>
+            <div class="stat-label">Servimos a ambos</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <!-- REPLACE: swap the div below for <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover"/> -->
+          <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Reemplaza con tu foto
+          </div>
+          <div class="hero-img-badge">
+            <div class="badge-big-num">FSS</div>
+            <div class="badge-big-label">Flexible Staffing Services LLC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TICKER ── -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item">Contabilidad</span>
+        <span class="ticker-item">Preparación de Impuestos</span>
+        <span class="ticker-item">Conciliación Bancaria</span>
+        <span class="ticker-item">Estados Financieros</span>
+        <span class="ticker-item">Contabilidad al Día</span>
+        <span class="ticker-item">Soporte 1099 &amp; W-2</span>
+        <span class="ticker-item">Personas y Empresas</span>
+        <span class="ticker-item">Soporte Todo el Año</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">Contabilidad</span>
+        <span class="ticker-item">Preparación de Impuestos</span>
+        <span class="ticker-item">Conciliación Bancaria</span>
+        <span class="ticker-item">Estados Financieros</span>
+        <span class="ticker-item">Contabilidad al Día</span>
+        <span class="ticker-item">Soporte 1099 &amp; W-2</span>
+        <span class="ticker-item">Personas y Empresas</span>
+        <span class="ticker-item">Soporte Todo el Año</span>
+      </div>
+    </div>
+
+    <!-- ── SOLUTION ── -->
+    <section class="solution" id="solution">
+      <p class="section-tag">Cómo ayudamos</p>
+      <h2 class="section-title">
+        Registros limpios hoy.<br />Declaración de impuestos sin estrés mañana.
+      </h2>
+      <div class="divider"></div>
+      <div class="solution-inner">
+        <div class="solution-img-wrap">
+          <!-- REPLACE with your image -->
+          <div class="img-placeholder">
+          <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Reemplaza con tu foto
+          </div>
+        </div>
+        <div>
+          <p class="section-sub" style="margin-bottom: 2rem">
+            La mayoría de las personas llegan a la temporada de impuestos con
+            registros desordenados, recibos perdidos y una carrera de último
+            minuto. Nosotros lo resolvemos. Mantenemos tus finanzas organizadas
+            durante todo el año para que tu declaración sea sencilla, precisa y
+            se presente a tiempo — siempre.
+          </p>
+          <div class="solution-points">
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Registros organizados todo el año</h4>
+                <p>
+                  Categorizamos tus ingresos y gastos con regularidad para que
+                  nada se pierda y todo esté listo cuando lo necesites.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Declaración de impuestos, bien hecha</h4>
+                <p>
+                  Como tus registros siempre están al día, preparar tu
+                  declaración es rápido y sin complicaciones — sin andar
+                  buscando documentos a última hora.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Para personas y empresas por igual</h4>
+                <p>
+                  Freelancer, propietario único, LLC o empresa en crecimiento —
+                  adaptamos nuestros servicios a tu situación.
+                </p>
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-icon">✦</div>
+              <div class="point-text">
+                <h4>Sin tecnicismos, solo claridad</h4>
+                <p>
+                  Te explicamos todo en términos simples. Siempre sabrás el
+                  estado de tus finanzas sin necesitar un título en contabilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#contact"
+            class="btn-primary"
+            style="display: inline-block; margin-top: 2rem"
+            >Solicitar una consulta gratuita</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="process" id="process">
+      <p class="section-tag">Cómo funciona</p>
+      <h2 class="section-title">
+        Cuatro pasos simples hacia<br />la tranquilidad financiera.
+      </h2>
+      <div class="divider"></div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">◎</div>
+          <h3>Consulta gratuita</h3>
+          <p>
+            Comenzamos con una llamada rápida para entender tu situación — el
+            tipo de negocio, el estado actual de tus registros y lo que
+            necesitas.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">◎</div>
+          <h3>Revisamos tus registros</h3>
+          <p>
+            Compartes tus documentos financieros. Evaluamos qué está en orden,
+            qué falta y qué necesita corregirse.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">◎</div>
+          <h3>Nos ponemos a trabajar</h3>
+          <p>
+            Organizamos, categorizamos y conciliamos tus registros. Si estás
+            atrasado, te ponemos al corriente. Luego mantenemos tus cuentas al
+            día.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">◎</div>
+          <h3>Declaración presentada a tiempo</h3>
+          <p>
+            Cuando llega la temporada de impuestos, tus registros ya están
+            limpios. Preparamos y presentamos tu declaración con precisión y sin
+            estrés de último momento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="services" id="services">
+      <div class="services-header">
+        <div>
+          <p class="section-tag">Lo que ofrecemos</p>
+          <h2 class="section-title">Nuestros servicios</h2>
+        </div>
+        <p
+          style="max-width: 280px; font-size: 0.9rem; color: var(--gray-light)"
+        >
+          Servicios claros diseñados para mantener tus finanzas en orden y tu
+          declaración lista — durante todo el año.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <span class="service-arrow">↗</span>
+          <h3>Contabilidad Mensual</h3>
+          <p>
+            Registramos y categorizamos cada transacción — ingresos, gastos y
+            todo lo demás — manteniendo tus registros precisos cada mes.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <span class="service-arrow">↗</span>
+          <h3>Conciliación Bancaria</h3>
+          <p>
+            Comparamos tus registros con tus estados de cuenta para detectar
+            errores, duplicados o entradas faltantes antes de que se conviertan
+            en un problema.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <span class="service-arrow">↗</span>
+          <h3>Preparación de Declaración de Impuestos</h3>
+          <p>
+            Con tus registros ya limpios, preparamos y presentamos tus
+            declaraciones federales y estatales con precisión y a tiempo — para
+            personas y empresas.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <span class="service-arrow">↗</span>
+          <h3>Estados Financieros</h3>
+          <p>
+            Informes de ganancias y pérdidas, balances generales y estados de
+            flujo de efectivo que te dan una visión clara de tu salud
+            financiera.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <span class="service-arrow">↗</span>
+          <h3>Contabilidad Atrasada</h3>
+          <p>
+            ¿Llevas meses sin actualizar tus registros? Los revisamos desde
+            atrás, limpiamos todo — meses o incluso un año completo — para que
+            puedas empezar de cero con todo en orden.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <span class="service-arrow">↗</span>
+          <h3>Soporte 1099 &amp; W-2</h3>
+          <p>
+            Te ayudamos a preparar y organizar los formularios que necesitas
+            para contratistas y empleados, manteniéndote en cumplimiento y listo
+            para la temporada de impuestos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHO WE SERVE ── -->
+    <section class="who" id="who">
+      <p class="section-tag">Con quién trabajamos</p>
+      <h2 class="section-title">
+        Diseñado para personas<br />y empresas por igual.
+      </h2>
+      <div class="divider"></div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-card-img">
+            <!-- REPLACE with your image -->
+            <div class="img-placeholder" style="border-radius: 0">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Reemplaza con foto
+            </div>
+          </div>
+          <div class="who-card-overlay"></div>
+          <div class="who-card-body">
+            <div class="who-tag">Para personas</div>
+            <h3>Freelancers e independientes</h3>
+            <p>
+              Ya sea que trabajes por cuenta propia, seas contratista o tengas
+              ingresos de múltiples fuentes — mantenemos tus finanzas personales
+              organizadas y tu declaración sin complicaciones.
+            </p>
+            <ul class="who-list">
+              <li>Freelancers y trabajadores de plataformas</li>
+              <li>Contratistas independientes</li>
+              <li>Propietarios únicos</li>
+              <li>Cualquier persona con ingresos por cuenta propia</li>
+            </ul>
+          </div>
+        </div>
+        <div class="who-card">
+          <div class="who-card-img">
+            <!-- REPLACE with your image -->
+            <div class="img-placeholder" style="border-radius: 0">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Reemplaza con foto
+            </div>
+          </div>
+          <div class="who-card-overlay"></div>
+          <div class="who-card-body">
+            <div class="who-tag">Para empresas</div>
+            <h3>LLCs, S-Corps y empresas en crecimiento</h3>
+            <p>
+              Dirigir un negocio requiere registros limpios y actualizados —
+              no solo al final del año. Nos encargamos del área financiera para
+              que puedas enfocarte en las operaciones y el crecimiento.
+            </p>
+            <ul class="who-list">
+              <li>LLCs de un solo miembro y de varios miembros</li>
+              <li>S-Corps y C-Corps</li>
+              <li>Pequeñas empresas con empleados</li>
+              <li>Startups y equipos en crecimiento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NUMBERS ── -->
+    <div class="numbers">
+      <div class="numbers-grid">
+        <div class="number-item">
+          <div class="number-big">100%</div>
+          <div class="number-label">Precisión garantizada</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">12</div>
+          <div class="number-label">Meses de soporte al año</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">2</div>
+          <div class="number-label">Tipos de clientes atendidos</div>
+        </div>
+        <div class="number-item">
+          <div class="number-big">0</div>
+          <div class="number-label">Cobros sorpresa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TRUST ── -->
+    <section class="trust" id="trust">
+      <p class="section-tag">Por qué los clientes confían en nosotros</p>
+      <h2 class="section-title">
+        Confiables, precisos<br />y siempre de tu lado.
+      </h2>
+      <div class="divider"></div>
+      <div class="trust-inner">
+        <div class="trust-img-wrap">
+          <!-- REPLACE with team photo or office image -->
+          <div class="img-placeholder">
+                      <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Reemplaza con tu foto
+          </div>
+        </div>
+        <div class="trust-right">
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">
+                  Experiencia con personas y empresas
+                </div>
+                <div class="badge-desc">
+                  Trabajamos con freelancers, propietarios únicos, LLCs y
+                  pequeñas empresas — adaptándonos a lo que cada cliente
+                  realmente necesita.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Disponibilidad todo el año</div>
+                <div class="badge-desc">
+                  No desaparecemos después de la temporada de impuestos. Tus
+                  registros se mantienen cada mes para que siempre estés listo
+                  — no solo en abril.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Comunicación clara</div>
+                <div class="badge-desc">
+                  Sin tecnicismos. Te explicamos tus finanzas en términos
+                  simples y te mantenemos informado en cada paso del proceso.
+                </div>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">◈</div>
+              <div>
+                <div class="badge-title">Confidencial y seguro</div>
+                <div class="badge-desc">
+                  Tu información financiera se maneja con total discreción.
+                  Tomamos la privacidad en serio y tratamos los datos de cada
+                  cliente con cuidado.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="testimonials-section" id="testimonials">
+      <p class="section-tag">Lo que dicen los clientes</p>
+      <h2 class="section-title">Resultados reales, personas reales.</h2>
+      <div class="divider"></div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Antes le temía a la temporada de impuestos cada año. Desde que
+            trabajo con Flexible Staffing Services, todo ya está organizado
+            cuando llega el momento. Es un gran peso de menos."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">María R.</div>
+              <div class="author-role">Diseñadora Freelance, Texas</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Detectaron un error de conciliación que nos habría costado casi
+            $3,000. La atención al detalle es incomparable con otros
+            contadores que hemos tenido."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JT</div>
+            <div>
+              <div class="author-name">James T.</div>
+              <div class="author-role">Dueño, Empresa de Logística</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Tenía dos años de registros desordenados y los limpiaron todo sin
+            hacerme sentir juzgada. Profesionales, rápidos y genuinamente
+            útiles."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AL</div>
+            <div>
+              <div class="author-name">Andrea L.</div>
+              <div class="author-role">Contratista Independiente, Florida</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Pasamos de apresurarnos cada abril a tener nuestra declaración
+            lista semanas antes. Solo la tranquilidad ya vale cada centavo."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DK</div>
+            <div>
+              <div class="author-name">David K.</div>
+              <div class="author-role">Dueño de LLC, California</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Como freelancer, siempre me confundía sobre qué podía deducir.
+            Me explicaron todo y se aseguraron de que no pagara de más. Me
+            ahorraron cientos de dólares."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div>
+              <div class="author-name">Carlos R.</div>
+              <div class="author-role">Desarrollador Freelance, Nueva York</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Cambiarme a Flexible Staffing Services fue la mejor decisión de
+            negocios que tomé el año pasado. Mis registros están limpios, mi
+            estrés bajó y mi contador nos adora ahora."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <div class="author-name">Sarah K.</div>
+              <div class="author-role">Dueña de Boutique, Georgia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" id="faq">
+      <p class="section-tag">Preguntas frecuentes</p>
+      <h2 class="section-title">Todo lo que necesitas<br />saber.</h2>
+      <div class="divider"></div>
+      <div class="faq-inner">
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-q">
+              ¿Qué es exactamente la contabilidad y por qué la necesito?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                La contabilidad es el proceso de registrar y organizar cada
+                transacción financiera en tu negocio o finanzas personales —
+                ingresos, gastos, pagos y recibos. Sin ella, navegas a ciegas.
+                Los registros limpios permiten presentar tus impuestos con
+                precisión, detectar problemas de flujo de caja a tiempo y tomar
+                decisiones financieras con confianza.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              ¿Trabajan con personas o solo con empresas?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Con ambos. Trabajamos con freelancers, contratistas
+                independientes, propietarios únicos, LLCs, S-Corps y pequeñas
+                empresas. Ya seas una sola persona con ingresos por cuenta
+                propia o una empresa en crecimiento con empleados, adaptamos
+                nuestros servicios a tu situación.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Mis registros están desorganizados. ¿Pueden ayudarme?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Por supuesto — es una de las situaciones más comunes con las que
+                trabajamos. Ofrecemos servicios de contabilidad atrasada para
+                revisar tus registros desde atrás, limpiar todo y ponerte
+                completamente al corriente. No juzgamos; simplemente lo
+                arreglamos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              ¿Cómo funciona el proceso? ¿Por dónde empiezo?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Empieza con una consulta gratuita. Hablaremos sobre tu
+                situación, evaluaremos lo que necesitas y haremos un plan. A
+                partir de ahí, compartes tus documentos financieros y nos
+                ponemos a trabajar. Todo el proceso de incorporación es sencillo
+                y te guiamos en cada paso.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              ¿Necesito proporcionar algo para empezar?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Necesitaremos acceso a tus estados de cuenta bancarios, registros
+                existentes (si los hay) y algunos datos básicos sobre tus
+                ingresos y gastos. Después de tu consulta te daremos una lista
+                clara de lo que recopilar — nada más de lo necesario.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              ¿Cuánto cuesta? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                El precio depende del alcance del trabajo — la complejidad de
+                tus finanzas, cuántas transacciones tienes por mes y qué
+                servicios necesitas. No tenemos cargos ocultos. Todo se habla y
+                se acuerda por adelantado. Contáctanos y te daremos una
+                cotización clara y honesta.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-img-wrap">
+          <!-- REPLACE with your image -->
+          <div class="img-placeholder">
+                      <img src="/assets/imgs/Gemini_Generated_Image_t8x8gat8x8gat8x8.png" style="width:100%;height:100%;object-fit:cover"/>
+
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Reemplaza con tu foto
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ── -->
+    <div class="cta-banner">
+      <div class="cta-banner-text">
+        <h2>¿Listo para dejar de estresarte<br />por tus finanzas?</h2>
+        <p>Obtén una consulta gratuita — sin compromiso, sin presión.</p>
+      </div>
+      <div class="cta-banner-btns">
+        <a href="#contact" class="btn-primary">Agendar una consulta gratuita</a>
+        <a href="mailto:bobby@flexbpo.com" class="btn-ghost"
+          >Escríbenos directamente</a
+        >
+      </div>
+    </div>
+
+    <!-- ── CONTACT ── -->
+    <section class="contact" id="contact">
+      <p class="section-tag">Contáctanos</p>
+      <h2 class="section-title">
+        Pongamos tus finanzas<br />en orden — hoy mismo.
+      </h2>
+      <div class="divider"></div>
+      <div class="contact-wrap">
+        <div class="contact-info-block">
+          <p class="section-sub" style="margin-bottom: 2.5rem">
+            Contáctanos para una consulta gratuita. Revisaremos tu situación y
+            te diremos exactamente cómo podemos ayudarte — sin ningún
+            compromiso.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-icon">@</div>
+            <div>
+              <div class="contact-label">Correo electrónico</div>
+              <div class="contact-val">
+                <a href="mailto:bobby@flexbpo.com">bobby@flexbpo.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">@</div>
+            <div>
+              <div class="contact-label">Correo electrónico</div>
+              <div class="contact-val">
+                <a href="mailto:valenciaroberto@me.com"
+                  >valenciaroberto@me.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">⊕</div>
+            <div>
+              <div class="contact-label">Atendemos a</div>
+              <div class="contact-val">
+                Personas y empresas en todo EE. UU.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nombre</label><input type="text" placeholder="Juan" />
+            </div>
+            <div class="form-group">
+              <label>Apellido</label><input type="text" placeholder="García" />
+            </div>
+            <div class="form-group full">
+              <label>Soy…</label>
+              <select>
+                <option value="" disabled selected>
+                  Selecciona tu situación
+                </option>
+                <option>Persona / Freelancer</option>
+                <option>Propietario único</option>
+                <option>LLC o Corporación</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Nombre de la empresa (si aplica)</label
+              ><input type="text" placeholder="Acme LLC" />
+            </div>
+            <div class="form-group full">
+              <label>Correo electrónico</label
+              ><input type="email" placeholder="juan@correo.com" />
+            </div>
+            <div class="form-group full">
+              <label>Número de teléfono</label
+              ><input type="tel" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group full">
+              <label>¿Cómo podemos ayudarte? (opcional)</label
+              ><textarea
+                rows="4"
+                placeholder="Cuéntanos un poco sobre tu situación — registros desordenados, declaración de impuestos, trabajo atrasado..."
+              ></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="button">Enviar mensaje →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            Flexible Staffing <span>Services</span> LLC
+          </div>
+          <p class="footer-tagline">
+            Contabilidad y preparación de impuestos para personas y empresas en
+            todo Estados Unidos. Registros limpios, temporada de impuestos sin
+            estrés.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#services">Contabilidad Mensual</a></li>
+            <li><a href="#services">Conciliación Bancaria</a></li>
+            <li><a href="#services">Preparación de Impuestos</a></li>
+            <li><a href="#services">Contabilidad Atrasada</a></li>
+            <li><a href="#services">Soporte 1099 &amp; W-2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:bobby@flexbpo.com">bobby@flexbpo.com</a></li>
+            <li>
+              <a href="mailto:valenciaroberto@me.com">valenciaroberto@me.com</a>
+            </li>
+            <li><a href="#contact">Consulta gratuita</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2025 Flexible Staffing Services LLC · Contabilidad y Preparación de Impuestos
+        </div>
+        <div class="footer-copy">
+          Atendiendo a personas y empresas en todo Estados Unidos
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          mobileMenu.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = mobileMenu.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+    </script>
+  </body>
+</html>
